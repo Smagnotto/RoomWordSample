@@ -2,6 +2,7 @@ package br.com.saraiva.roomwordsample
 
 import android.app.Application
 import br.com.saraiva.roomwordsample.di.dbModule
+import br.com.saraiva.roomwordsample.di.repoModule
 import br.com.saraiva.roomwordsample.di.uiModule
 import br.com.saraiva.roomwordsample.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +20,8 @@ class MyApplication : Application() {
                 listOf(
                     dbModule,
                     uiModule,
-                    viewModelModule
+                    viewModelModule,
+                    repoModule
                 )
             )
         }

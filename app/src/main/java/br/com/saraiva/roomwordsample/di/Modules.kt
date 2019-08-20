@@ -4,6 +4,7 @@ import androidx.room.Room
 import br.com.saraiva.roomwordsample.DAO.WordRoomDatabase
 import br.com.saraiva.roomwordsample.WordListAdapter
 import br.com.saraiva.roomwordsample.WordViewModel
+import br.com.saraiva.roomwordsample.repository.WordRepository
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -21,6 +22,10 @@ val dbModule = module {
 
 val uiModule = module {
     factory { WordListAdapter(get()) }
+}
+
+val repoModule = module {
+    factory { WordRepository(get()) }
 }
 
 val viewModelModule = module {
