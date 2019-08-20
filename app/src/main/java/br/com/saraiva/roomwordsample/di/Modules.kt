@@ -25,7 +25,7 @@ val uiModule = module {
 }
 
 val repoModule = module {
-    factory { WordRepository(get()) }
+    single { WordRepository(get()) }
 }
 
 val viewModelModule = module {
